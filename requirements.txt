@@ -1,0 +1,3 @@
+discord-oauth2.py
+httpx
+flask

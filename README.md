@@ -47,7 +47,7 @@ Copy all of your tokens into `data/tokens.txt`
 
 Input your `Guild ID` of your server into `config.py`
 
-Make sure the Discord Bot is in your  erver
+Make sure the Discord Bot is in your server
 
 Run `main.py`
 

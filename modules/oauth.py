@@ -1,7 +1,7 @@
 import discordoauth2
 from flask import Flask, request
 import config, time, logging
-client = discordoauth2.Client(1084209480075587625, secret=config.client_secret,
+client = discordoauth2.Client(config.client_id, secret=config.client_secret,
 redirect="http://localhost:8080/oauth2", bot_token=config.bot_token)
 app = Flask(__name__)
 

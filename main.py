@@ -1,4 +1,4 @@
-import config
+import config, os
 import httpx, threading, time
 from modules import oauth
 from concurrent.futures import ThreadPoolExecutor
@@ -66,6 +66,12 @@ class Token:
 class Joiner:
 
     def start():
+        if not os.path.exists("data"):
+            os.mkdir("data")
+        if not os.path.exists("data/tokens.txt"):
+            print("tokens.txt not found!")
+            open("data/tokens.txt", "w").close()
+            return
         with open("data/tokens.txt", "r") as f:
             tokens = f.read().splitlines()
             
